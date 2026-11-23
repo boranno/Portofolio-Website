@@ -1255,3 +1255,115 @@ html.lightbox-open {
     transition: none;
   }
 }
+
+/* ==========================================================================
+   CUSTOM MOUSE CURSOR (Phase H.4 — Fine-Pointer Desktop Enhancement Only)
+   ========================================================================== */
+
+.custom-cursor {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  pointer-events: none;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity var(--duration-fast) ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .custom-cursor {
+    display: block;
+  }
+}
+
+.custom-cursor.is-visible {
+  opacity: 1;
+}
+
+.custom-cursor.is-hidden-for-input {
+  opacity: 0;
+}
+
+.custom-cursor-dot,
+.custom-cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.custom-cursor-dot {
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  margin-top: -3px;
+  background-color: var(--accent);
+  transition:
+    background-color var(--duration-fast) ease,
+    width var(--duration-fast) var(--ease-editorial),
+    height var(--duration-fast) var(--ease-editorial),
+    margin var(--duration-fast) var(--ease-editorial);
+}
+
+.custom-cursor-ring {
+  width: 28px;
+  height: 28px;
+  margin-left: -14px;
+  margin-top: -14px;
+  border: 1.5px solid rgba(84, 120, 168, 0.55);
+  background-color: transparent;
+  transition:
+    width var(--duration-fast) var(--ease-editorial),
+    height var(--duration-fast) var(--ease-editorial),
+    margin var(--duration-fast) var(--ease-editorial),
+    border-color var(--duration-fast) ease,
+    background-color var(--duration-fast) ease;
+}
+
+/* Dark Band & Lightbox Polarity */
+.custom-cursor.is-over-dark .custom-cursor-dot {
+  background-color: var(--dark-accent);
+}
+
+.custom-cursor.is-over-dark .custom-cursor-ring {
+  border-color: rgba(125, 162, 212, 0.6);
+}
+
+/* Interactive Hover Expansion */
+.custom-cursor.is-hovering .custom-cursor-ring {
+  width: 40px;
+  height: 40px;
+  margin-left: -20px;
+  margin-top: -20px;
+  border-color: var(--accent);
+  background-color: var(--accent-tint);
+}
+
+.custom-cursor.is-hovering.is-over-dark .custom-cursor-ring {
+  border-color: var(--dark-accent);
+  background-color: var(--dark-accent-tint);
+}
+
+/* Click Contraction Feedback */
+.custom-cursor.is-pressed .custom-cursor-ring {
+  width: 22px;
+  height: 22px;
+  margin-left: -11px;
+  margin-top: -11px;
+}
+
+.custom-cursor.is-pressed .custom-cursor-dot {
+  width: 5px;
+  height: 5px;
+  margin-left: -2.5px;
+  margin-top: -2.5px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .custom-cursor {
+    display: none !important;
+  }
+}

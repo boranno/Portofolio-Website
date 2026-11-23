@@ -4,6 +4,7 @@ import { initScrollReveal } from './modules/reveal.js';
 import { initProjectFilter } from './modules/project-filter.js';
 import { initCopyEmail } from './modules/copy-email.js';
 import { initLightbox } from './modules/lightbox.js';
+import { initCustomCursor } from './modules/cursor.js';
 
 document.documentElement.classList.add('js-ready');
 
@@ -19,6 +20,7 @@ function boot() {
   initProjectFilter();
   initCopyEmail();
   initLightbox();
+  initCustomCursor();
 }
 
 if (document.readyState === 'loading') {
