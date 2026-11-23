@@ -2,6 +2,8 @@
 
 Personal technical portfolio for **Boranno Golder**, Computer Science and Engineering graduate (Daffodil International University) focused on **AI, Machine Learning, Data Science, Embedded Systems, and IoT**.
 
+**Live Site:** [https://boranno-golder-portfolio.vercel.app/](https://boranno-golder-portfolio.vercel.app/)
+
 ## Architecture
 
 - **Framework-free static HTML5**, modular CSS (`tokens.css` → `base.css` → `layout.css` → `components.css` → `pages/*.css`), and native JavaScript.
