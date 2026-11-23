@@ -1,0 +1,389 @@
+/* ==========================================================================
+   WORK LISTING PAGE — Curated Editorial Showcase & Asymmetric Project Spreads
+   Built strictly on existing design tokens, layout rails, and components.
+   ========================================================================== */
+
+/* 01. Work Introduction Hero */
+.work-hero {
+  padding-top: var(--space-6);
+  padding-bottom: clamp(3.5rem, 6vw, 5.5rem);
+}
+
+.work-hero-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+
+.work-count-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.7rem;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: var(--text-mono-label);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--text-primary);
+}
+
+.work-hero-title {
+  font-size: clamp(2.4rem, 5vw, 4.25rem);
+  line-height: 1.04;
+  letter-spacing: -0.032em;
+  max-width: 17ch;
+}
+
+.work-hero-lead {
+  margin-top: var(--space-5);
+  font-size: var(--text-lead);
+  line-height: 1.68;
+  max-width: 62ch;
+  color: var(--text-secondary-accessible);
+}
+
+/* 02. Featured Project — AgriShift Dark Editorial Showcase */
+.work-featured-band {
+  padding-block: clamp(4.5rem, 7.5vw, 7rem);
+}
+
+.featured-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-7);
+}
+
+.featured-badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.featured-title {
+  font-size: clamp(1.95rem, 3.6vw, 3.1rem);
+  line-height: 1.08;
+  letter-spacing: -0.028em;
+  max-width: 22ch;
+}
+
+.featured-lead {
+  font-size: clamp(1.0625rem, 1.3vw, 1.2rem);
+  line-height: 1.65;
+  color: #C2C8D4;
+  max-width: 66ch;
+}
+
+/* 4-Column Project Metadata Bar */
+.featured-meta-bar {
+  margin: var(--space-2) 0 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-4);
+  padding-block: var(--space-5);
+  border-top: 1px solid var(--dark-border);
+  border-bottom: 1px solid var(--dark-border);
+}
+
+.featured-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+.featured-meta-item dd {
+  margin: 0;
+  font-size: var(--text-sm);
+  line-height: 1.5;
+  color: var(--dark-text-primary);
+}
+
+/* Asymmetric Showcase Stage + Editorial Summary */
+.featured-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-6);
+  align-items: start;
+}
+
+.featured-media-panel {
+  border: 1px solid var(--dark-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background-color: var(--dark-bg-media);
+}
+
+.featured-media-panel .project-media--storyboard {
+  border-bottom: none;
+}
+
+.featured-narrative {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  padding: var(--space-6);
+  background: var(--dark-bg-surface);
+  border: 1px solid var(--dark-border);
+  border-radius: var(--radius-md);
+}
+
+.featured-narrative-block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.featured-narrative-block p {
+  font-size: 0.9375rem;
+  line-height: 1.68;
+  color: #C2C8D4;
+}
+
+.featured-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--dark-border);
+}
+
+@media (min-width: 640px) {
+  .featured-meta-bar {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-5);
+  }
+}
+
+@media (min-width: 1024px) {
+  .featured-meta-bar {
+    grid-template-columns: 1fr 1.35fr 0.8fr 1.45fr;
+    gap: var(--space-6);
+  }
+
+  .featured-grid {
+    grid-template-columns: 7.4fr 4.6fr;
+    gap: var(--space-6);
+    align-items: stretch;
+  }
+
+  .featured-narrative {
+    justify-content: space-between;
+    padding: var(--space-7);
+  }
+}
+
+/* 03 & 04. Secondary Asymmetric Project Spreads (Light & Tinted Bands) */
+.work-spread-band {
+  padding-block: clamp(4.25rem, 7vw, 6.5rem);
+}
+
+.work-spread-band--tinted {
+  background-color: var(--bg-subtle);
+}
+
+.work-spread {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-6);
+  align-items: center;
+}
+
+.work-spread-copy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  min-width: 0;
+}
+
+.work-spread-title {
+  font-size: clamp(1.6rem, 2.8vw, 2.25rem);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.022em;
+}
+
+.work-spread-desc {
+  font-size: 1rem;
+  line-height: 1.68;
+  color: var(--text-secondary-accessible);
+  max-width: 56ch;
+}
+
+/* Compact Verified Context Strip (Light Surface) */
+.context-ledger {
+  margin: var(--space-2) 0 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-4);
+  padding-block: var(--space-4);
+  border-top: 1px solid var(--border-default);
+  border-bottom: 1px solid var(--border-default);
+}
+
+.context-ledger-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.context-ledger-item dd {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.work-spread-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4);
+  padding-top: var(--space-2);
+}
+
+/* Light-Canvas Archival Visual Placeholder Frame */
+.work-figure-frame {
+  margin: 0;
+  padding: var(--space-3);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  transition: border-color var(--duration-normal) ease;
+}
+
+.work-figure-frame:hover {
+  border-color: var(--accent);
+}
+
+.work-figure-stage {
+  width: 100%;
+  min-height: 240px;
+  padding: var(--space-5);
+  background-color: var(--bg-subtle);
+  background-image:
+    linear-gradient(to right, rgba(23, 25, 30, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(23, 25, 30, 0.03) 1px, transparent 1px);
+  background-size: 24px 24px;
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .work-figure-stage {
+    aspect-ratio: 16 / 10;
+  }
+}
+
+.work-spread-band--tinted .work-figure-stage {
+  background-color: var(--bg-canvas);
+}
+
+.work-figure-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.work-figure-center {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-block: auto;
+  max-width: 44ch;
+}
+
+.work-figure-title {
+  font-family: var(--font-heading);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+.work-figure-note {
+  font-size: var(--text-sm);
+  line-height: 1.55;
+  color: var(--text-secondary-accessible);
+}
+
+@media (min-width: 640px) {
+  .context-ledger {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-5);
+  }
+}
+
+@media (min-width: 1024px) {
+  .work-spread {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: var(--space-6);
+  }
+
+  /* Section 03: Copy Left (6 cols) / Visual Right (6 cols) */
+  .work-spread--text-left .work-spread-copy {
+    grid-column: 1 / span 6;
+  }
+
+  .work-spread--text-left .work-spread-media {
+    grid-column: 7 / span 6;
+  }
+
+  /* Section 04: Visual Left (6 cols) / Copy Right (6 cols) */
+  .work-spread--media-left .work-spread-media {
+    grid-column: 1 / span 6;
+    order: 1;
+  }
+
+  .work-spread--media-left .work-spread-copy {
+    grid-column: 7 / span 6;
+    order: 2;
+  }
+}
+
+/* 05. Closing CTA Band (Dark Band Seamless above Shared Footer) */
+.work-cta-band {
+  padding-block: clamp(4.5rem, 7vw, 6.5rem);
+}
+
+.work-cta-inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  max-width: 64ch;
+}
+
+.work-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  padding-top: var(--space-2);
+}
+
+@media (min-width: 1024px) {
+  .work-cta-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: var(--space-7);
+  }
+
+  .work-cta-actions {
+    flex-shrink: 0;
+  }
+}

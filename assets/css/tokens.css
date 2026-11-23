@@ -1,0 +1,89 @@
+/* ==========================================================================
+   DESIGN TOKENS — Premium Technical Editorial
+   Single source of truth for color polarity, typography, spacing & motion.
+   ========================================================================== */
+
+:root {
+  /* Editorial Light Polarity (Default) */
+  --bg-canvas: #F7F7F4;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #EFEFEA;
+
+  --text-primary: #17191E;
+  --text-secondary: #737985;
+  --text-secondary-accessible: #5A606C; /* 5.9:1 on #F7F7F4 for body <18px */
+
+  --accent: #5478A8;
+  --accent-ink: #3F608E; /* 6.0:1 on #F7F7F4 for inline text links */
+  --accent-tint: rgba(84, 120, 168, 0.10);
+
+  --border-default: #E4E5E2;
+  --border-strong: #C9CBC6;
+
+  /* Dark Showcase Polarity (Projects & Contact Bands) */
+  --dark-bg-canvas: #17191E;
+  --dark-bg-surface: #1F2229;
+  --dark-bg-elevated: #262A33;
+  --dark-bg-media: #13151A;
+
+  --dark-text-primary: #F7F7F4;
+  --dark-text-secondary: #A4AAB6; /* 7.4:1 on #17191E */
+  --dark-text-muted: #7C8391;
+
+  --dark-accent: #7DA2D4; /* 6.6:1 on #17191E */
+  --dark-accent-tint: rgba(125, 162, 212, 0.14);
+  --dark-border: #2B2F3A;
+  --dark-border-strong: #3E4454;
+
+  /* Semantic Status */
+  --status-success: #2E6F4E;
+  --status-success-dark: #63B98A;
+  --status-error: #B43C3C;
+
+  /* Typography Families */
+  --font-heading: 'Space Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* Fluid Type Scale */
+  --text-display: clamp(2.35rem, 4.8vw, 4.25rem);
+  --text-page-title: clamp(2rem, 3.8vw, 3.125rem);
+  --text-h2: clamp(1.625rem, 2.6vw, 2.25rem);
+  --text-h3: clamp(1.2rem, 1.6vw, 1.45rem);
+  --text-lead: clamp(1.0625rem, 1.25vw, 1.25rem);
+  --text-body: 1rem;
+  --text-sm: 0.875rem;
+  --text-mono-meta: 0.8125rem;
+  --text-mono-label: 0.75rem;
+
+  /* Spacing Scale (8px baseline) */
+  --space-1: 0.25rem;  /* 4px */
+  --space-2: 0.5rem;   /* 8px */
+  --space-3: 0.75rem;  /* 12px */
+  --space-4: 1rem;     /* 16px */
+  --space-5: 1.5rem;   /* 24px */
+  --space-6: 2rem;     /* 32px */
+  --space-7: 3rem;     /* 48px */
+  --space-8: 4rem;     /* 64px */
+  --space-9: 5.5rem;   /* 88px */
+  --space-10: 7.5rem;  /* 120px */
+
+  /* Layout */
+  --container-max: 80rem; /* 1280px */
+  --gutter: clamp(1.25rem, 4vw, 3rem);
+  --nav-height: 4.5rem; /* 72px */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+
+  /* Motion */
+  --ease-editorial: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-fast: 180ms;
+  --duration-normal: 260ms;
+  --duration-reveal: 480ms;
+}
+
+@media (max-width: 767px) {
+  :root {
+    --nav-height: 4rem; /* 64px */
+  }
+}

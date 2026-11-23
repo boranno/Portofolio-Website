@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en" data-page="esp32-iot" data-root="../../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ESP32 &amp; IoT Engineering — Case Study Structure — Boranno Golder</title>
+  <meta
+    name="description"
+    content="Embedded systems and IoT engineering case study layout structure by Boranno Golder. Content placeholders prepared for verified hardware and firmware documentation."
+  >
+  <link rel="icon" type="image/svg+xml" href="../../assets/icons/favicon.svg">
+
+  <!-- Typography: Space Grotesk, Inter, IBM Plex Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Shared Design System + ESP32 & IoT Page Structure -->
+  <link rel="stylesheet" href="../../assets/css/tokens.css">
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <link rel="stylesheet" href="../../assets/css/pages/esp32-iot.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- Shared Header & Mobile Drawer (mounted via assets/js/modules/shell.js) -->
+  <div data-site-header></div>
+
+  <main id="main-content">
+    <!-- ====================================================================
+         01 — PROJECT HERO (Dark Editorial Engineering Hero)
+         ==================================================================== -->
+    <section class="band band--first band--dark hw-hero" id="hero" aria-labelledby="project-title">
+      <div class="container">
+        <nav aria-label="Breadcrumb">
+          <ol class="breadcrumb">
+            <li><a href="../../index.html">Home</a></li>
+            <li class="breadcrumb-sep" aria-hidden="true">/</li>
+            <li><a href="../index.html">Work</a></li>
+            <li class="breadcrumb-sep" aria-hidden="true">/</li>
+            <li aria-current="page">ESP32 &amp; IoT</li>
+          </ol>
+        </nav>
+
+        <div class="hw-hero-header">
+          <div class="hw-category-row">
+            <span class="tag tag--accent">01 / EMBEDDED CASE STUDY</span>
+            <span class="tag">[PROJECT CATEGORY TO BE CONFIRMED]</span>
+          </div>
+
+          <h1 class="hw-hero-title" id="project-title">
+            [PROJECT TITLE TO BE ADDED]
+          </h1>
+
+          <p class="hw-hero-summary">
+            [SHORT PROJECT DESCRIPTION TO BE ADDED]
+          </p>
+
+          <dl class="hw-meta-grid" aria-label="Hardware project metadata placeholders">
+            <div class="hw-meta-item">
+              <dt class="mono-label">Hardware</dt>
+              <dd>[HARDWARE PLATFORM TO BE CONFIRMED]</dd>
+            </div>
+            <div class="hw-meta-item">
+              <dt class="mono-label">Platform</dt>
+              <dd>[DEVELOPMENT PLATFORM TO BE CONFIRMED]</dd>
+            </div>
+            <div class="hw-meta-item">
+              <dt class="mono-label">Application</dt>
+              <dd>[APPLICATION DOMAIN TO BE ADDED]</dd>
+            </div>
+            <div class="hw-meta-item">
+              <dt class="mono-label">Status</dt>
+              <dd>[PROJECT STATUS TO BE CONFIRMED]</dd>
+            </div>
+          </dl>
+        </div>
+
+        <figure class="hw-figure" data-image-slot="esp32-hero">
+          <div class="hw-figure-box hw-figure-box--wide">
+            <div class="hw-figure-top">
+              <span class="mono-label">FIG. 01 // MAIN HARDWARE / PROJECT VISUAL</span>
+              <span class="mono-meta">PLACEHOLDER</span>
+            </div>
+            <div class="hw-figure-center">
+              <span class="hw-placeholder-token">[MAIN HARDWARE / PROJECT VISUAL TO BE ADDED]</span>
+              <p class="hw-placeholder-hint">
+                Reserved for the primary verified hardware prototype photograph or system setup capture.
+              </p>
+            </div>
+            <span class="mono-meta">SLOT · Primary hardware visual asset pending</span>
+          </div>
+          <figcaption class="hw-figure-caption">
+            <span class="mono-label">FIG. 01</span>
+            <span class="mono-meta">[HERO FIGURE CAPTION TO BE ADDED]</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         02 — PROJECT OVERVIEW (Light Editorial Rail)
+         ==================================================================== -->
+    <section class="band hw-band" id="overview" aria-labelledby="overview-heading">
+      <div class="container editorial-rail">
+        <div class="rail-aside" data-reveal>
+          <span class="mono-label rail-index">02 / PROJECT OVERVIEW</span>
+          <h2 id="overview-heading">Project Overview</h2>
+          <p class="rail-note">High-level summary and engineering purpose of the embedded system.</p>
+        </div>
+
+        <div class="rail-main hw-stack" data-reveal data-reveal-delay="80">
+          <div class="hw-two-col">
+            <div class="hw-placeholder-copy">
+              <span class="mono-label">Overview</span>
+              <span class="hw-placeholder-token">[PROJECT OVERVIEW TO BE ADDED]</span>
+            </div>
+
+            <div class="hw-placeholder-copy">
+              <span class="mono-label">Purpose</span>
+              <span class="hw-placeholder-token">[PROJECT PURPOSE TO BE ADDED]</span>
+            </div>
+          </div>
+
+          <figure class="hw-figure" data-image-slot="esp32-overview">
+            <div class="hw-figure-box">
+              <div class="hw-figure-top">
+                <span class="mono-label">FIG. 02 // OVERVIEW VISUAL</span>
+                <span class="mono-meta">PLACEHOLDER</span>
+              </div>
+              <div class="hw-figure-center">
+                <span class="hw-placeholder-token">[OVERVIEW VISUAL TO BE ADDED]</span>
+                <p class="hw-placeholder-hint">
+                  Reserved for verified bench setup photograph or physical deployment overview.
+                </p>
+              </div>
+              <span class="mono-meta">SLOT · Overview visual asset pending</span>
+            </div>
+            <figcaption class="hw-figure-caption">
+              <span class="mono-label">FIG. 02</span>
+              <span class="mono-meta">[OVERVIEW CAPTION TO BE ADDED]</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         03 — PROBLEM & ENGINEERING OBJECTIVES (Tinted Editorial Rail)
+         ==================================================================== -->
+    <section class="band hw-band hw-band--tinted" id="problem" aria-labelledby="problem-heading">
+      <div class="container editorial-rail">
+        <div class="rail-aside" data-reveal>
+          <span class="mono-label rail-index">03 / PROBLEM &amp; OBJECTIVES</span>
+          <h2 id="problem-heading">Problem &amp; Engineering Objectives</h2>
+          <p class="rail-note">Real-world engineering constraints and numbered system objectives.</p>
+        </div>
+
+        <div class="rail-main hw-stack" data-reveal data-reveal-delay="80">
+          <div class="hw-placeholder-copy">
+            <span class="mono-label">Problem Statement</span>
+            <span class="hw-placeholder-token">[PROBLEM STATEMENT TO BE ADDED]</span>
+          </div>
+
+          <div class="hw-ledger" aria-label="Engineering objective placeholders">
+            <article class="hw-ledger-row">
+              <div><span class="mono-label">Objective 01</span></div>
+              <div class="hw-placeholder-copy">
+                <span class="hw-placeholder-token">[ENGINEERING OBJECTIVES TO BE ADDED — 01]</span>
+              </div>
+            </article>
+
+            <article class="hw-ledger-row">
+              <div><span class="mono-label">Objective 02</span></div>
+              <div class="hw-placeholder-copy">
+                <span class="hw-placeholder-token">[ENGINEERING OBJECTIVES TO BE ADDED — 02]</span>
+              </div>
+            </article>
+
+            <article class="hw-ledger-row">
+              <div><span class="mono-label">Objective 03</span></div>
+              <div class="hw-placeholder-copy">
+                <span class="hw-placeholder-token">[ENGINEERING OBJECTIVES TO BE ADDED — 03]</span>
+              </div>
+            </article>
+          </div>
+
+          <figure class="hw-figure" data-image-slot="esp32-problem-visual">
+            <div class="hw-figure-box">
+              <div class="hw-figure-top">
+                <span class="mono-label">FIG. 03 // SUPPORTING ENGINEERING VISUAL</span>
+                <span class="mono-meta">PLACEHOLDER</span>
+              </div>
+              <div class="hw-figure-center">
+                <span class="hw-placeholder-token">[SUPPORTING ENGINEERING VISUAL TO BE ADDED]</span>
+                <p class="hw-placeholder-hint">
+                  Reserved for verified physical constraint diagram or context photograph.
+                </p>
+              </div>
+              <span class="mono-meta">SLOT · Supporting visual asset pending</span>
+            </div>
+            <figcaption class="hw-figure-caption">
+              <span class="mono-label">FIG. 03</span>
+              <span class="mono-meta">[SUPPORTING VISUAL CAPTION TO BE ADDED]</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         04 — HARDWARE COMPONENTS (Light 6-Slot Component Inventory)
+         ==================================================================== -->
+    <section class="band hw-band" id="hardware" aria-labelledby="hardware-heading">
+      <div class="container">
+        <div class="hw-section-head" data-reveal>
+          <span class="mono-label rail-index">04 / HARDWARE COMPONENTS</span>
+          <h2 id="hardware-heading">Hardware Components</h2>
+          <p>
+            Bill-of-materials inventory prepared for verified component names, purposes, electrical specifications, and datasheet references.
+          </p>
+        </div>
+
+        <div class="hw-inventory-grid" data-reveal data-reveal-delay="80">
+          <article class="hw-component-card">
+            <span class="mono-label">Component 01</span>
+            <span class="hw-placeholder-token">[COMPONENT NAME TO BE CONFIRMED]</span>
+            <dl class="hw-component-fields">
+              <div class="hw-component-field">
+                <dt class="mono-label">Purpose</dt>
+                <dd>[COMPONENT PURPOSE TO BE ADDED]</dd>
+              </div>
+              <div class="hw-component-field">
+                <dt class="mono-label">Specifications</dt>
+                <dd>[COMPONENT SPECIFICATIONS TO BE VERIFIED]</dd>
+              </div>
+              <div class="hw-component-field">
+                <dt class="mono-label">Reference</dt>
+                <dd>[DATASHEET LINK TO BE ADDED]</dd>
+              </div>
+            </dl>
+          </article>
+
+          <article class="hw-component-card">
+            <span class="mono-label">Component 02</span>
+            <span class="hw-placeholder-token">[COMPONENT NAME TO BE CONFIRMED]</span>
+            <dl class="hw-component-fields">
+              <div class="hw-component-field">
+                <dt class="mono-label">Purpose</dt>
+                <dd>[COMPONENT PURPOSE TO BE ADDED]</dd>
+              </div>
+              <div class="hw-component-field">
+                <dt class="mono-label">Specifications</dt>
+                <dd>[COMPONENT SPECIFICATIONS TO BE VERIFIED]</dd>
+              </div>
+              <div class="hw-component-field">
+                <dt class="mono-label">Reference</dt>
+                <dd>[DATASHEET LINK TO BE ADDED]</dd>
+              </div>
+            </dl>
+          </article>
+
+          <article class="hw-component-card">
+            <span class="mono-label">Component 03</span>
+            <span class="hw-placeholder-token">[COMPONENT NAME TO BE CONFIRMED]</span>
+            <dl class="hw-component-fields">
+              <div class="hw-component-field">
+                <dt class="mono-label">Purpose</dt>
+                <dd>[COMPONENT PURPOSE TO BE ADDED]</dd>
+              </div>
+              <div class="hw-component-field">
+                <dt class="mono-label">Specifications</dt>
+                <dd>[COMPONENT SPECIFICATIONS TO BE VERIFIED]</dd>
+              </div>
+              <div class="hw-component-field">
+                <dt class="mono-label">Reference</dt>
+                <dd>[DATASHEET LINK TO BE ADDED]</dd>
+              </div>
+            </dl>
+          </article>
+
+          <article class="hw-component-card">
+            <span class="mono-label">Component 04</span>
+            <span class="hw-placeholder-token">[COMPONENT NAME TO BE CONFIRMED]</span>
+            <dl class="hw-component-fields">
+              <div class="hw-component-field">
+                <dt class="mono-label">Purpose</dt>
+                <dd>[COMPONENT PURPOSE TO BE ADDED]</dd>
+              </div>
+              <div class="hw-component-field">
+                <dt class="mono-label">Specifications</dt>
+                <dd>[COMPONENT SPECIFICATIONS TO BE VERIFIED]</dd>
+              </div>
+              <div class="hw-component-field">
+                <dt class="mono-label">Reference</dt>
+                <dd>[DATASHEET LINK TO BE ADDED]</dd>
+              </div>
+            </dl>
+          </article>
+
+          <article class="hw-component-card">
+            <span class="mono-label">Component 05</span>
+            <span class="hw-placeholder-token">[COMPONENT NAME TO BE CONFIRMED]</span>
+            <dl class="hw-component-fields">
+              <div class="hw-component-field">
+                <dt class="mono-label">Purpose</dt>
+                <dd>[COMPONENT PURPOSE TO BE ADDED]</dd>
+              </div>
+              <div class="hw-component-field">
+                <dt class="mono-label">Specifications</dt>
+                <dd>[COMPONENT SPECIFICATIONS TO BE VERIFIED]</dd>
+              </div>
+              <div class="hw-component-field">
+                <dt class="mono-label">Reference</dt>
+                <dd>[DATASHEET LINK TO BE ADDED]</dd>
+              </div>
+            </dl>
+          </article>
+
+          <article class="hw-component-card">
+            <span class="mono-label">Component 06</span>
+            <span class="hw-placeholder-token">[COMPONENT NAME TO BE CONFIRMED]</span>
+            <dl class="hw-component-fields">
+              <div class="hw-component-field">
+                <dt class="mono-label">Purpose</dt>
+                <dd>[COMPONENT PURPOSE TO BE ADDED]</dd>
+              </div>
+              <div class="hw-component-field">
+                <dt class="mono-label">Specifications</dt>
+                <dd>[COMPONENT SPECIFICATIONS TO BE VERIFIED]</dd>
+              </div>
+              <div class="hw-component-field">
+                <dt class="mono-label">Reference</dt>
+                <dd>[DATASHEET LINK TO BE ADDED]</dd>
+              </div>
+            </dl>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         05 — SYSTEM ARCHITECTURE (Dark Architectural Band)
+         ==================================================================== -->
+    <section class="band band--dark hw-band" id="architecture" aria-labelledby="arch-heading">
+      <div class="container">
+        <div class="hw-section-head" data-reveal>
+          <span class="mono-label rail-index">05 / SYSTEM ARCHITECTURE</span>
+          <h2 id="arch-heading">System Architecture</h2>
+          <div class="hw-placeholder-copy">
+            <span class="hw-placeholder-token">[SYSTEM ARCHITECTURE DESCRIPTION TO BE ADDED]</span>
+            <p class="hw-placeholder-hint">
+              Overview of hardware, embedded firmware, communication layer, and monitoring subsystems.
+            </p>
+          </div>
+        </div>
+
+        <figure class="hw-figure" data-image-slot="esp32-architecture" data-reveal data-reveal-delay="80">
+          <div class="hw-figure-box hw-figure-box--wide">
+            <div class="hw-figure-top">
+              <span class="mono-label">FIG. 04 // SYSTEM ARCHITECTURE DIAGRAM</span>
+              <span class="mono-meta">PLACEHOLDER</span>
+            </div>
+            <div class="hw-figure-center">
+              <span class="hw-placeholder-token">[ARCHITECTURE DIAGRAM TO BE ADDED]</span>
+              <p class="hw-placeholder-hint">
+                Reserved for the verified end-to-end embedded and IoT system architecture diagram.
+              </p>
+            </div>
+            <span class="mono-meta">SLOT · System architecture diagram pending</span>
+          </div>
+          <figcaption class="hw-figure-caption">
+            <span class="mono-label">FIG. 04</span>
+            <span class="mono-meta">[ARCHITECTURE DIAGRAM CAPTION TO BE ADDED]</span>
+          </figcaption>
+        </figure>
+
+        <div class="hw-subsystems-grid" data-reveal data-reveal-delay="120">
+          <article class="hw-subsystem-card">
+            <span class="mono-label">Subsystem 01</span>
+            <span class="hw-placeholder-token">[SUBSYSTEM 01 TO BE CONFIRMED]</span>
+            <p class="hw-placeholder-hint">[SUBSYSTEM DETAILS TO BE ADDED]</p>
+          </article>
+
+          <article class="hw-subsystem-card">
+            <span class="mono-label">Subsystem 02</span>
+            <span class="hw-placeholder-token">[SUBSYSTEM 02 TO BE CONFIRMED]</span>
+            <p class="hw-placeholder-hint">[SUBSYSTEM DETAILS TO BE ADDED]</p>
+          </article>
+
+          <article class="hw-subsystem-card">
+            <span class="mono-label">Subsystem 03</span>
+            <span class="hw-placeholder-token">[SUBSYSTEM 03 TO BE CONFIRMED]</span>
+            <p class="hw-placeholder-hint">[SUBSYSTEM DETAILS TO BE ADDED]</p>
+          </article>
+
+          <article class="hw-subsystem-card">
+            <span class="mono-label">Subsystem 04</span>
+            <span class="hw-placeholder-token">[SUBSYSTEM 04 TO BE CONFIRMED]</span>
+            <p class="hw-placeholder-hint">[SUBSYSTEM DETAILS TO BE ADDED]</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         06 — CIRCUIT DESIGN & CONNECTIONS (Light Schematic Rail)
+         ==================================================================== -->
+    <section class="band hw-band" id="circuit-design" aria-labelledby="circuit-heading">
+      <div class="container editorial-rail">
+        <div class="rail-aside" data-reveal>
+          <span class="mono-label rail-index">06 / CIRCUIT DESIGN</span>
+          <h2 id="circuit-heading">Circuit Design &amp; Connections</h2>
+          <p class="rail-note">Verified wiring schematic, pin mapping, and power specifications.</p>
+        </div>
+
+        <div class="rail-main hw-stack" data-reveal data-reveal-delay="80">
+          <figure class="hw-figure" data-image-slot="esp32-circuit">
+            <div class="hw-figure-box hw-figure-box--wide">
+              <div class="hw-figure-top">
+                <span class="mono-label">FIG. 05 // CIRCUIT / WIRING DIAGRAM</span>
+                <span class="mono-meta">PLACEHOLDER</span>
+              </div>
+              <div class="hw-figure-center">
+                <span class="hw-placeholder-token">[CIRCUIT DIAGRAM TO BE ADDED]</span>
+                <p class="hw-placeholder-hint">
+                  Large schematic area reserved for verified circuit schematic or wiring diagram export.
+                </p>
+              </div>
+              <span class="mono-meta">SLOT · Circuit diagram asset pending</span>
+            </div>
+            <figcaption class="hw-figure-caption">
+              <span class="mono-label">FIG. 05</span>
+              <span class="mono-meta">[CIRCUIT DIAGRAM CAPTION TO BE ADDED]</span>
+            </figcaption>
+          </figure>
+
+          <div class="hw-three-col">
+            <div class="hw-placeholder-copy">
+              <span class="mono-label">Connections</span>
+              <span class="hw-placeholder-token">[CONNECTION DETAILS TO BE ADDED]</span>
+            </div>
+
+            <div class="hw-placeholder-copy">
+              <span class="mono-label">Pin Mapping</span>
+              <span class="hw-placeholder-token">[PIN CONFIGURATION TO BE VERIFIED]</span>
+            </div>
+
+            <div class="hw-placeholder-copy">
+              <span class="mono-label">Power Budget</span>
+              <span class="hw-placeholder-token">[POWER REQUIREMENTS TO BE VERIFIED]</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         07 — FIRMWARE & EMBEDDED LOGIC (Tinted Editorial Rail)
+         ==================================================================== -->
+    <section class="band hw-band hw-band--tinted" id="firmware" aria-labelledby="firmware-heading">
+      <div class="container editorial-rail">
+        <div class="rail-aside" data-reveal>
+          <span class="mono-label rail-index">07 / FIRMWARE &amp; LOGIC</span>
+          <h2 id="firmware-heading">Firmware &amp; Embedded Logic</h2>
+          <p class="rail-note">Embedded control loop, toolchain, and verified source excerpts.</p>
+        </div>
+
+        <div class="rail-main hw-stack" data-reveal data-reveal-delay="80">
+          <div class="hw-placeholder-copy">
+            <span class="mono-label">Firmware Overview</span>
+            <span class="hw-placeholder-token">[FIRMWARE OVERVIEW TO BE ADDED]</span>
+          </div>
+
+          <div class="hw-two-col">
+            <div class="hw-placeholder-copy">
+              <span class="mono-label">Language</span>
+              <span class="hw-placeholder-token">[PROGRAMMING LANGUAGE TO BE CONFIRMED]</span>
+            </div>
+
+            <div class="hw-placeholder-copy">
+              <span class="mono-label">Environment</span>
+              <span class="hw-placeholder-token">[DEVELOPMENT ENVIRONMENT TO BE CONFIRMED]</span>
+            </div>
+          </div>
+
+          <div class="hw-placeholder-copy">
+            <span class="mono-label">Control Logic</span>
+            <span class="hw-placeholder-token">[FIRMWARE LOGIC TO BE EXPLAINED]</span>
+          </div>
+
+          <div class="hw-two-col">
+            <figure class="hw-figure" data-image-slot="esp32-firmware-flow">
+              <div class="hw-figure-box">
+                <div class="hw-figure-top">
+                  <span class="mono-label">FIG. 06A // FIRMWARE WORKFLOW</span>
+                  <span class="mono-meta">PLACEHOLDER</span>
+                </div>
+                <div class="hw-figure-center">
+                  <span class="hw-placeholder-token">[FIRMWARE WORKFLOW DIAGRAM TO BE ADDED]</span>
+                </div>
+                <span class="mono-meta">SLOT · Firmware workflow pending</span>
+              </div>
+              <figcaption class="hw-figure-caption">
+                <span class="mono-label">FIG. 06A</span>
+                <span class="mono-meta">[FIRMWARE WORKFLOW CAPTION TO BE ADDED]</span>
+              </figcaption>
+            </figure>
+
+            <figure class="hw-figure" data-image-slot="esp32-code-excerpt">
+              <div class="hw-figure-box">
+                <div class="hw-figure-top">
+                  <span class="mono-label">FIG. 06B // SOURCE EXCERPT</span>
+                  <span class="mono-meta">PLACEHOLDER</span>
+                </div>
+                <div class="hw-figure-center">
+                  <span class="hw-placeholder-token">[CODE SCREENSHOT / SOURCE EXCERPT TO BE ADDED]</span>
+                </div>
+                <span class="mono-meta">SLOT · Verified code excerpt pending</span>
+              </div>
+              <figcaption class="hw-figure-caption">
+                <span class="mono-label">FIG. 06B</span>
+                <span class="mono-meta">[SOURCE EXCERPT CAPTION TO BE ADDED]</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         08 — CONNECTIVITY & DATA FLOW (Light Editorial Rail)
+         ==================================================================== -->
+    <section class="band hw-band" id="connectivity" aria-labelledby="connectivity-heading">
+      <div class="container editorial-rail">
+        <div class="rail-aside" data-reveal>
+          <span class="mono-label rail-index">08 / CONNECTIVITY &amp; DATA FLOW</span>
+          <h2 id="connectivity-heading">Connectivity &amp; Data Flow</h2>
+          <p class="rail-note">Verified transport protocols, transmission pipeline, and backend storage.</p>
+        </div>
+
+        <div class="rail-main hw-stack" data-reveal data-reveal-delay="80">
+          <div class="hw-two-col">
+            <div class="hw-placeholder-copy">
+              <span class="mono-label">Protocol</span>
+              <span class="hw-placeholder-token">[COMMUNICATION PROTOCOL TO BE CONFIRMED]</span>
+            </div>
+
+            <div class="hw-placeholder-copy">
+              <span class="mono-label">Connectivity</span>
+              <span class="hw-placeholder-token">[CONNECTIVITY DETAILS TO BE ADDED]</span>
+            </div>
+
+            <div class="hw-placeholder-copy">
+              <span class="mono-label">Transmission</span>
+              <span class="hw-placeholder-token">[DATA TRANSMISSION WORKFLOW TO BE ADDED]</span>
+            </div>
+
+            <div class="hw-placeholder-copy">
+              <span class="mono-label">Backend / Storage</span>
+              <span class="hw-placeholder-token">[SERVER / CLOUD / DATABASE DETAILS TO BE CONFIRMED]</span>
+            </div>
+          </div>
+
+          <figure class="hw-figure" data-image-slot="esp32-data-flow">
+            <div class="hw-figure-box">
+              <div class="hw-figure-top">
+                <span class="mono-label">FIG. 07 // DATA FLOW DIAGRAM</span>
+                <span class="mono-meta">PLACEHOLDER</span>
+              </div>
+              <div class="hw-figure-center">
+                <span class="hw-placeholder-token">[DATA FLOW DIAGRAM TO BE ADDED]</span>
+                <p class="hw-placeholder-hint">
+                  Reserved for verified device-to-backend-to-client data flow diagram.
+                </p>
+              </div>
+              <span class="mono-meta">SLOT · Data flow diagram pending</span>
+            </div>
+            <figcaption class="hw-figure-caption">
+              <span class="mono-label">FIG. 07</span>
+              <span class="mono-meta">[DATA FLOW CAPTION TO BE ADDED]</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         09 — DASHBOARD & MONITORING (Dark Showcase Band)
+         ==================================================================== -->
+    <section class="band band--dark hw-band" id="dashboard" aria-labelledby="dashboard-heading">
+      <div class="container">
+        <div class="hw-section-head" data-reveal>
+          <span class="mono-label rail-index">09 / DASHBOARD &amp; MONITORING</span>
+          <h2 id="dashboard-heading">Dashboard &amp; Monitoring</h2>
+          <div class="hw-placeholder-copy">
+            <span class="hw-placeholder-token">[DASHBOARD OVERVIEW TO BE ADDED]</span>
+          </div>
+        </div>
+
+        <div class="hw-dashboard-grid" data-reveal data-reveal-delay="80">
+          <figure class="hw-figure hw-dashboard-lead" data-image-slot="esp32-dashboard-main">
+            <div class="hw-figure-box hw-figure-box--wide">
+              <div class="hw-figure-top">
+                <span class="mono-label">FIG. 08A // PRIMARY DASHBOARD VIEW</span>
+                <span class="mono-meta">SCREENSHOT PLACEHOLDER</span>
+              </div>
+              <div class="hw-figure-center">
+                <span class="hw-placeholder-token">[DASHBOARD SCREENSHOT TO BE ADDED]</span>
+                <p class="hw-placeholder-hint">
+                  Large viewport reserved for the primary verified monitoring dashboard screenshot.
+                </p>
+              </div>
+              <span class="mono-meta">SLOT · Main dashboard screenshot pending</span>
+            </div>
+            <figcaption class="hw-figure-caption">
+              <span class="mono-label">FIG. 08A</span>
+              <span class="mono-meta">[MAIN DASHBOARD CAPTION TO BE ADDED]</span>
+            </figcaption>
+          </figure>
+
+          <figure class="hw-figure" data-image-slot="esp32-dashboard-sub-01">
+            <div class="hw-figure-box">
+              <div class="hw-figure-top">
+                <span class="mono-label">FIG. 08B // SUPPORTING VIEW 01</span>
+                <span class="mono-meta">SCREENSHOT PLACEHOLDER</span>
+              </div>
+              <div class="hw-figure-center">
+                <span class="hw-placeholder-token">[SUPPORTING SCREENSHOT 01 TO BE ADDED]</span>
+              </div>
+              <span class="mono-meta">SLOT · Supporting capture 01 pending</span>
+            </div>
+            <figcaption class="hw-figure-caption">
+              <span class="mono-label">FIG. 08B</span>
+              <span class="mono-meta">[SUPPORTING VIEW 01 CAPTION TO BE ADDED]</span>
+            </figcaption>
+          </figure>
+
+          <figure class="hw-figure" data-image-slot="esp32-dashboard-sub-02">
+            <div class="hw-figure-box">
+              <div class="hw-figure-top">
+                <span class="mono-label">FIG. 08C // SUPPORTING VIEW 02</span>
+                <span class="mono-meta">SCREENSHOT PLACEHOLDER</span>
+              </div>
+              <div class="hw-figure-center">
+                <span class="hw-placeholder-token">[SUPPORTING SCREENSHOT 02 TO BE ADDED]</span>
+              </div>
+              <span class="mono-meta">SLOT · Supporting capture 02 pending</span>
+            </div>
+            <figcaption class="hw-figure-caption">
+              <span class="mono-label">FIG. 08C</span>
+              <span class="mono-meta">[SUPPORTING VIEW 02 CAPTION TO BE ADDED]</span>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="hw-placeholder-copy" style="margin-top: var(--space-6);" data-reveal data-reveal-delay="120">
+          <span class="mono-label">Monitoring Features</span>
+          <span class="hw-placeholder-token">[MONITORING FEATURES TO BE CONFIRMED]</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         10 — TESTING, RESULTS & CHALLENGES (Light 3-Part Layout)
+         ==================================================================== -->
+    <section class="band hw-band" id="testing" aria-labelledby="testing-heading">
+      <div class="container">
+        <div class="hw-section-head" data-reveal>
+          <span class="mono-label rail-index">10 / TESTING, RESULTS &amp; CHALLENGES</span>
+          <h2 id="testing-heading">Testing, Results &amp; Challenges</h2>
+          <p>
+            Separated placeholders for verified bench testing procedures, observed results, and engineering limitations.
+          </p>
+        </div>
+
+        <div class="hw-three-col" data-reveal data-reveal-delay="80">
+          <article class="hw-trio-card">
+            <span class="mono-label">01 · Validation</span>
+            <h3 class="hw-trio-title">Testing</h3>
+            <div class="hw-placeholder-copy">
+              <span class="mono-label">Procedure</span>
+              <span class="hw-placeholder-token">[TESTING PROCEDURE TO BE ADDED]</span>
+            </div>
+            <div class="hw-placeholder-copy">
+              <span class="mono-label">Environment</span>
+              <span class="hw-placeholder-token">[TEST ENVIRONMENT TO BE CONFIRMED]</span>
+            </div>
+          </article>
+
+          <article class="hw-trio-card">
+            <span class="mono-label">02 · Outcomes</span>
+            <h3 class="hw-trio-title">Results</h3>
+            <div class="hw-placeholder-copy">
+              <span class="mono-label">Verified Results</span>
+              <span class="hw-placeholder-token">[VERIFIED TEST RESULTS TO BE ADDED]</span>
+            </div>
+            <div class="hw-placeholder-copy">
+              <span class="mono-label">Observations</span>
+              <span class="hw-placeholder-token">[PERFORMANCE OBSERVATIONS TO BE ADDED]</span>
+            </div>
+          </article>
+
+          <article class="hw-trio-card">
+            <span class="mono-label">03 · Constraints</span>
+            <h3 class="hw-trio-title">Challenges</h3>
+            <div class="hw-placeholder-copy">
+              <span class="mono-label">Engineering Challenges</span>
+              <span class="hw-placeholder-token">[ENGINEERING CHALLENGES TO BE ADDED]</span>
+            </div>
+            <div class="hw-placeholder-copy">
+              <span class="mono-label">Limitations</span>
+              <span class="hw-placeholder-token">[KNOWN LIMITATIONS TO BE ADDED]</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         11 — FUTURE DEVELOPMENT (Tinted Numbered Ledger)
+         ==================================================================== -->
+    <section class="band hw-band hw-band--tinted" id="future" aria-labelledby="future-heading">
+      <div class="container editorial-rail">
+        <div class="rail-aside" data-reveal>
+          <span class="mono-label rail-index">11 / FUTURE DEVELOPMENT</span>
+          <h2 id="future-heading">Future Development</h2>
+          <p class="rail-note">Planned hardware, firmware, and telemetry iterations.</p>
+        </div>
+
+        <div class="rail-main hw-stack" data-reveal data-reveal-delay="80">
+          <div class="hw-ledger">
+            <article class="hw-ledger-row">
+              <div><span class="mono-label">Direction 01</span></div>
+              <div class="hw-placeholder-copy">
+                <span class="hw-placeholder-token">[FUTURE IMPROVEMENT 01 TO BE ADDED]</span>
+              </div>
+            </article>
+
+            <article class="hw-ledger-row">
+              <div><span class="mono-label">Direction 02</span></div>
+              <div class="hw-placeholder-copy">
+                <span class="hw-placeholder-token">[FUTURE IMPROVEMENT 02 TO BE ADDED]</span>
+              </div>
+            </article>
+
+            <article class="hw-ledger-row">
+              <div><span class="mono-label">Direction 03</span></div>
+              <div class="hw-placeholder-copy">
+                <span class="hw-placeholder-token">[FUTURE IMPROVEMENT 03 TO BE ADDED]</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         12 — PROJECT NAVIGATION (Dark Band Leading into Shared Footer)
+         ==================================================================== -->
+    <section class="band band--dark hw-nav-band" id="project-navigation" aria-labelledby="project-nav-heading">
+      <div class="container">
+        <h2 class="sr-only" id="project-nav-heading">Project Navigation</h2>
+
+        <div class="hw-project-pager" data-reveal>
+          <a class="hw-pager-card" href="../academic-performance-ml/index.html">
+            <span class="mono-label">← Previous Project</span>
+            <span class="hw-pager-title">Academic Performance Prediction</span>
+            <span class="mono-meta">Case Study 02 · Academic ML Research</span>
+          </a>
+
+          <div class="hw-pager-card hw-pager-card--next hw-pager-card--placeholder" aria-label="Next project placeholder">
+            <span class="mono-label">Next Project →</span>
+            <span class="hw-placeholder-token">[NEXT PROJECT PLACEHOLDER]</span>
+            <span class="mono-meta">Final project in current sequence</span>
+          </div>
+        </div>
+
+        <div class="hw-nav-utility">
+          <span class="mono-meta">12 / PROJECT NAVIGATION</span>
+          <div class="hw-nav-actions">
+            <a class="btn btn--secondary btn--sm" href="../index.html">← Back to Work</a>
+            <a class="btn btn--primary btn--sm" href="../../contact/index.html">Contact</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared Footer (mounted via assets/js/modules/shell.js) -->
+  <div data-site-footer></div>
+
+  <script type="module" src="../../assets/js/main.js"></script>
+</body>
+</html>

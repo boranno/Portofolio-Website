@@ -1,0 +1,245 @@
+/* ==========================================================================
+   ABOUT PAGE — Editorial Composition & Section-Specific Styles
+   Focused exclusively on personal & academic identity, technical focus,
+   professional direction, and direct contact.
+   ========================================================================== */
+
+/* Rebalanced Vertical Rhythm for 5-Section About Page */
+.about-band {
+  padding-block: clamp(4rem, 6.5vw, 6.25rem);
+}
+
+.about-band--tinted {
+  background-color: var(--bg-subtle);
+}
+
+/* 01. About Hero (Asymmetric 7 / 4 Split with Portrait Plate) */
+.about-hero {
+  padding-top: var(--space-6);
+  padding-bottom: clamp(4.5rem, 7vw, 6.5rem);
+}
+
+.about-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-7);
+  align-items: start;
+}
+
+.about-hero-copy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  min-width: 0;
+}
+
+.about-hero-title {
+  font-size: clamp(2.4rem, 4.8vw, 4.1rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  max-width: 15ch;
+}
+
+.about-hero-lead {
+  font-size: var(--text-lead);
+  line-height: 1.7;
+  max-width: 58ch;
+  color: var(--text-secondary-accessible);
+}
+
+.about-hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-5);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border-default);
+}
+
+.about-hero-visual {
+  max-width: 340px;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .about-hero {
+    padding-top: var(--space-7);
+    padding-bottom: var(--space-10);
+  }
+
+  .about-hero-grid {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: var(--space-5);
+    align-items: center;
+  }
+
+  .about-hero-copy {
+    grid-column: 1 / span 7;
+  }
+
+  .about-hero-visual {
+    grid-column: 9 / span 4;
+    max-width: none;
+  }
+}
+
+/* 02. Background & Editorial Prose */
+.about-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.about-body-prose {
+  max-width: 64ch;
+}
+
+/* 03. Unified Technical Focus Block */
+.focus-banner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-4) var(--space-5);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius-sm);
+}
+
+.focus-banner-value {
+  font-family: var(--font-mono);
+  font-size: clamp(0.875rem, 1.15vw, 1rem);
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.focus-tiers {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  border-top: 1px solid var(--border-default);
+}
+
+.focus-tier-row {
+  padding-block: var(--space-5);
+  border-bottom: 1px solid var(--border-default);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-3);
+}
+
+.focus-tier-head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.focus-tier-title {
+  font-family: var(--font-heading);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.focus-tier-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.focus-tier-text {
+  font-size: var(--text-sm);
+  line-height: 1.65;
+  color: var(--text-secondary-accessible);
+  max-width: 58ch;
+}
+
+@media (min-width: 768px) {
+  .focus-tier-row {
+    grid-template-columns: 220px 1fr;
+    gap: var(--space-6);
+    align-items: start;
+  }
+}
+
+/* 04. What's Next Statement & Exploration Pillars */
+.direction-statement {
+  font-family: var(--font-heading);
+  font-size: clamp(1.25rem, 2vw, 1.65rem);
+  font-weight: 500;
+  line-height: 1.42;
+  letter-spacing: -0.015em;
+  color: var(--text-primary);
+  max-width: 46ch;
+}
+
+.direction-pillars {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-4);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--border-default);
+}
+
+.direction-pillar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.direction-pillar-title {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.direction-pillar-desc {
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--text-secondary-accessible);
+}
+
+@media (min-width: 640px) {
+  .direction-pillars {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-5);
+  }
+}
+
+/* 05. Contact CTA Band (Seamless above Shared Footer) */
+.about-cta-band {
+  padding-block: var(--space-9);
+}
+
+.about-cta-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-7);
+  align-items: start;
+}
+
+.about-cta-copy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.about-cta-copy p {
+  max-width: 44ch;
+}
+
+@media (min-width: 1024px) {
+  .about-cta-grid {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: var(--space-6);
+    align-items: center;
+  }
+
+  .about-cta-copy {
+    grid-column: 1 / span 5;
+  }
+
+  .about-cta-panel {
+    grid-column: 6 / span 7;
+  }
+}

@@ -1,0 +1,403 @@
+/* ==========================================================================
+   AGRISHIFT CASE STUDY — Reusable Editorial Case Study Structure (Phase D1)
+   Scoped locally to AgriShift; reuses existing global tokens & layout rails.
+   ========================================================================== */
+
+:root {
+  /* Restrained green editorial accent scoped to AgriShift case study */
+  --agri-green: #2F644C;
+  --agri-green-tint: rgba(47, 100, 76, 0.10);
+  --agri-green-dark: #74B495;
+  --agri-green-dark-tint: rgba(116, 180, 149, 0.14);
+}
+
+/* Case Study Band Cadence */
+.cs-band {
+  padding-block: clamp(4rem, 6.5vw, 6.25rem);
+}
+
+.cs-band--tinted {
+  background-color: var(--bg-subtle);
+}
+
+/* 01. Dark Editorial Case Study Hero */
+.cs-hero {
+  padding-top: var(--space-6);
+  padding-bottom: clamp(4.5rem, 7.5vw, 7rem);
+}
+
+.cs-hero .breadcrumb,
+.cs-hero .breadcrumb a {
+  color: var(--dark-text-secondary);
+}
+
+.cs-hero .breadcrumb a:hover {
+  color: var(--dark-text-primary);
+}
+
+.cs-hero .breadcrumb-sep {
+  color: var(--dark-border-strong);
+}
+
+.cs-hero-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-7);
+}
+
+.cs-category-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.tag--agri {
+  background-color: var(--agri-green-tint);
+  border-color: rgba(47, 100, 76, 0.28);
+  color: var(--agri-green);
+}
+
+.band--dark .tag--agri {
+  background-color: var(--agri-green-dark-tint);
+  border-color: rgba(116, 180, 149, 0.3);
+  color: var(--agri-green-dark);
+}
+
+.cs-hero-title {
+  font-size: clamp(2.25rem, 4.8vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  max-width: 22ch;
+}
+
+.cs-hero-tagline {
+  font-size: var(--text-lead);
+  line-height: 1.65;
+  color: #C2C8D4;
+  max-width: 64ch;
+}
+
+/* 4-Column Case Study Metadata Strip */
+.cs-meta-grid {
+  margin: var(--space-2) 0 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-4);
+  padding-block: var(--space-5);
+  border-top: 1px solid var(--dark-border);
+  border-bottom: 1px solid var(--dark-border);
+}
+
+.cs-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+.cs-meta-item dd {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--text-mono-meta);
+  color: var(--dark-text-primary);
+}
+
+@media (min-width: 640px) {
+  .cs-meta-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-5);
+  }
+}
+
+@media (min-width: 1024px) {
+  .cs-meta-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--space-6);
+  }
+}
+
+/* ==========================================================================
+   EDITORIAL PLACEHOLDER BLOCKS (Text, Figures, Diagrams & Galleries)
+   Designed to be visually intentional and 1-block swappable later.
+   ========================================================================== */
+
+.cs-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.cs-placeholder-copy {
+  padding: var(--space-5) var(--space-6);
+  background: var(--bg-surface);
+  border: 1px dashed var(--border-strong);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.cs-placeholder-copy--green {
+  border-left-color: var(--agri-green);
+}
+
+.band--dark .cs-placeholder-copy {
+  background: var(--dark-bg-surface);
+  border-color: var(--dark-border-strong);
+  border-left-color: var(--dark-accent);
+}
+
+.cs-placeholder-token {
+  font-family: var(--font-mono);
+  font-size: var(--text-mono-meta);
+  font-weight: 500;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.band--dark .cs-placeholder-token {
+  color: var(--dark-text-primary);
+}
+
+.cs-placeholder-hint {
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--text-secondary-accessible);
+  max-width: 60ch;
+}
+
+.band--dark .cs-placeholder-hint {
+  color: var(--dark-text-secondary);
+}
+
+/* Visual / Diagram Figure Placeholders */
+.cs-figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.cs-figure-box {
+  width: 100%;
+  min-height: 240px;
+  padding: var(--space-5);
+  background-color: var(--bg-surface);
+  background-image:
+    linear-gradient(to right, rgba(23, 25, 30, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(23, 25, 30, 0.03) 1px, transparent 1px);
+  background-size: 24px 24px;
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.cs-figure-box--wide {
+  min-height: 300px;
+}
+
+.band--dark .cs-figure-box {
+  background-color: var(--dark-bg-media);
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  border-color: var(--dark-border-strong);
+}
+
+.cs-figure-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.cs-figure-center {
+  margin-block: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  max-width: 50ch;
+}
+
+.cs-figure-caption {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-2);
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--border-default);
+}
+
+.band--dark .cs-figure-caption {
+  border-top-color: var(--dark-border);
+}
+
+@media (min-width: 768px) {
+  .cs-figure-box--wide {
+    min-height: 360px;
+  }
+}
+
+/* 05. Data Sources Ledger Placeholders */
+.cs-ledger {
+  border-top: 1px solid var(--border-default);
+}
+
+.cs-ledger-row {
+  padding-block: var(--space-5);
+  border-bottom: 1px solid var(--border-default);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-3);
+}
+
+@media (min-width: 768px) {
+  .cs-ledger-row {
+    grid-template-columns: 200px 1fr;
+    gap: var(--space-6);
+    align-items: start;
+  }
+}
+
+/* 06. Architecture Components Grid (Dark Band) */
+.cs-section-head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-7);
+  max-width: 60ch;
+}
+
+.cs-components-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-5);
+  margin-top: var(--space-6);
+}
+
+.cs-component-card {
+  padding: var(--space-5);
+  background: var(--dark-bg-surface);
+  border: 1px solid var(--dark-border);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+@media (min-width: 768px) {
+  .cs-components-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* 08. Visual Showcase Gallery Grid (Dark Band) */
+.cs-gallery-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-6);
+}
+
+@media (min-width: 768px) {
+  .cs-gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cs-gallery-lead {
+    grid-column: 1 / -1;
+  }
+}
+
+/* 09 & 10. Two-Column Structured Splits */
+.cs-two-col {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-5);
+}
+
+@media (min-width: 768px) {
+  .cs-two-col {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* 12. Project Navigation Band (Dark Band Seamless above Shared Footer) */
+.cs-nav-band {
+  padding-block: clamp(4rem, 6.5vw, 6rem);
+}
+
+.cs-project-pager {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-5);
+  margin-bottom: var(--space-7);
+}
+
+.cs-pager-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-6);
+  background: var(--dark-bg-surface);
+  border: 1px solid var(--dark-border);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition:
+    border-color var(--duration-normal) ease,
+    background-color var(--duration-normal) ease,
+    transform var(--duration-normal) var(--ease-editorial);
+}
+
+.cs-pager-card:hover {
+  border-color: var(--dark-accent);
+  background: #22262F;
+  transform: translateY(-2px);
+}
+
+.cs-pager-card--placeholder {
+  border-style: dashed;
+  border-color: var(--dark-border-strong);
+  background: rgba(31, 34, 41, 0.45);
+}
+
+.cs-pager-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--dark-text-primary);
+}
+
+.cs-nav-utility {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-4);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--dark-border);
+}
+
+.cs-nav-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+@media (min-width: 768px) {
+  .cs-project-pager {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cs-pager-card--next {
+    text-align: right;
+    align-items: flex-end;
+  }
+}
