@@ -66,17 +66,17 @@
 }
 
 .cs-hero-title {
-  font-size: clamp(2.25rem, 4.8vw, 4rem);
-  line-height: 1.05;
+  font-size: var(--text-page-title);
+  line-height: var(--leading-display);
   letter-spacing: -0.03em;
   max-width: 22ch;
 }
 
 .cs-hero-tagline {
   font-size: var(--text-lead);
-  line-height: 1.65;
+  line-height: var(--leading-lead);
   color: #C2C8D4;
-  max-width: 64ch;
+  max-width: var(--measure-prose);
 }
 
 /* 4-Column Case Study Metadata Strip */

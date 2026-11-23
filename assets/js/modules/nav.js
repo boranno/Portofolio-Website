@@ -9,7 +9,8 @@ export function initNavigation() {
   const toggleBtn = document.querySelector('[data-menu-toggle]');
   const drawer = document.querySelector('[data-mobile-drawer]');
 
-  if (header) {
+  if (header && !header.hasAttribute('data-nav-bound')) {
+    header.setAttribute('data-nav-bound', 'true');
     const updateHeaderState = () => {
       header.classList.toggle('is-scrolled', window.scrollY > 12);
     };
@@ -17,7 +18,8 @@ export function initNavigation() {
     window.addEventListener('scroll', updateHeaderState, { passive: true });
   }
 
-  if (toggleBtn && drawer) {
+  if (toggleBtn && drawer && !toggleBtn.hasAttribute('data-nav-bound')) {
+    toggleBtn.setAttribute('data-nav-bound', 'true');
     const setDrawerOpen = (isOpen, { restoreFocus = false } = {}) => {
       toggleBtn.setAttribute('aria-expanded', String(isOpen));
       toggleBtn.setAttribute(

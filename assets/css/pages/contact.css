@@ -1,0 +1,213 @@
+/* ==========================================================================
+   CONTACT PAGE — Minimal Technical Editorial Structure (Phase F)
+   Scoped strictly to contact/index.html; reuses global tokens & rails.
+   ========================================================================== */
+
+/* Section Band Cadence */
+.ct-band {
+  padding-block: clamp(3.75rem, 6.2vw, 5.75rem);
+}
+
+.ct-band--tinted {
+  background-color: var(--bg-subtle);
+}
+
+/* 01. Contact Hero (Light Editorial Canvas) */
+.ct-hero {
+  padding-top: var(--space-6);
+  padding-bottom: clamp(3.75rem, 6.5vw, 5.75rem);
+}
+
+.ct-hero-title {
+  margin-top: var(--space-3);
+  font-size: var(--text-page-title);
+  line-height: var(--leading-display);
+  letter-spacing: -0.03em;
+  max-width: 18ch;
+}
+
+.ct-hero-lead {
+  margin-top: var(--space-5);
+  font-size: var(--text-lead);
+  line-height: var(--leading-lead);
+  max-width: var(--measure-lead);
+  color: var(--text-secondary-accessible);
+}
+
+/* 02. Personal Introduction */
+.ct-statement {
+  font-family: var(--font-heading);
+  font-size: var(--text-statement);
+  font-weight: 500;
+  line-height: var(--leading-statement);
+  letter-spacing: -0.015em;
+  color: var(--text-primary);
+  max-width: var(--measure-statement);
+}
+
+.ct-note {
+  margin-top: var(--space-4);
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  max-width: var(--measure-lead);
+  color: var(--text-secondary-accessible);
+}
+
+/* 03. Direct Email Contact */
+.ct-email-block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.ct-email-link {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: clamp(1.375rem, 3.2vw, 2.5rem);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  color: var(--text-primary);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border-strong);
+  padding-bottom: var(--space-2);
+  word-break: break-word;
+  align-self: flex-start;
+  transition: color var(--duration-fast) ease, border-color var(--duration-fast) ease;
+}
+
+.ct-email-link:hover {
+  color: var(--accent-ink);
+  border-bottom-color: var(--accent);
+}
+
+.ct-email-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.ct-copy-feedback {
+  font-family: var(--font-mono);
+  font-size: var(--text-mono-label);
+  color: var(--status-success);
+  min-height: 1.2em;
+}
+
+/* 04. Professional Profiles (Clean Hairline Rows) */
+.ct-profile-list {
+  list-style: none;
+  border-top: 1px solid var(--border-default);
+}
+
+.ct-profile-row {
+  border-bottom: 1px solid var(--border-default);
+}
+
+.ct-profile-link {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-3) var(--space-5);
+  padding-block: var(--space-5);
+  text-decoration: none;
+  transition: padding-left var(--duration-fast) var(--ease-editorial);
+}
+
+.ct-profile-link:hover {
+  padding-left: var(--space-2);
+}
+
+.ct-profile-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ct-profile-name {
+  font-family: var(--font-heading);
+  font-size: clamp(1.125rem, 1.6vw, 1.35rem);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.ct-profile-url {
+  font-family: var(--font-mono);
+  font-size: var(--text-mono-meta);
+  color: var(--accent-ink);
+}
+
+.ct-profile-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: var(--text-mono-label);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-secondary-accessible);
+}
+
+.ct-profile-link:hover .ct-profile-arrow {
+  color: var(--text-primary);
+}
+
+/* 05. Collaboration Interests (Restrained Numbered Ledger) */
+.ct-topics-list {
+  list-style: none;
+  border-top: 1px solid var(--border-default);
+}
+
+.ct-topic-item {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  align-items: baseline;
+  gap: var(--space-4);
+  padding-block: var(--space-4);
+  border-bottom: 1px solid var(--border-default);
+}
+
+.ct-topic-name {
+  font-family: var(--font-heading);
+  font-size: clamp(1.0625rem, 1.4vw, 1.25rem);
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* 06. Closing Contact CTA (Dark Band Seamless above Shared Footer) */
+.ct-closing-band {
+  padding-block: clamp(4.25rem, 7vw, 6.25rem);
+}
+
+.ct-closing-layout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.ct-closing-copy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  max-width: 54ch;
+}
+
+.ct-closing-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+@media (min-width: 1024px) {
+  .ct-closing-layout {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: var(--space-7);
+  }
+
+  .ct-closing-actions {
+    flex-shrink: 0;
+  }
+}

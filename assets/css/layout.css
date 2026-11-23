@@ -80,8 +80,9 @@
 
 .rail-note {
   font-size: var(--text-sm);
+  line-height: 1.6;
   color: var(--text-secondary-accessible);
-  max-width: 30ch;
+  max-width: 32ch;
 }
 
 .band--dark .rail-note {
@@ -116,6 +117,9 @@
    ========================================================================== */
 
 [data-site-header] {
+  position: sticky;
+  top: 0;
+  z-index: 100;
   min-height: var(--nav-height);
 }
 

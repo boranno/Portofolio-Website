@@ -33,17 +33,17 @@
 }
 
 .work-hero-title {
-  font-size: clamp(2.4rem, 5vw, 4.25rem);
-  line-height: 1.04;
-  letter-spacing: -0.032em;
-  max-width: 17ch;
+  font-size: var(--text-page-title);
+  line-height: var(--leading-display);
+  letter-spacing: -0.03em;
+  max-width: 18ch;
 }
 
 .work-hero-lead {
   margin-top: var(--space-5);
   font-size: var(--text-lead);
-  line-height: 1.68;
-  max-width: 62ch;
+  line-height: var(--leading-lead);
+  max-width: var(--measure-prose);
   color: var(--text-secondary-accessible);
 }
 

@@ -34,16 +34,16 @@
 }
 
 .about-hero-title {
-  font-size: clamp(2.4rem, 4.8vw, 4.1rem);
-  line-height: 1.05;
+  font-size: var(--text-page-title);
+  line-height: var(--leading-display);
   letter-spacing: -0.03em;
-  max-width: 15ch;
+  max-width: 20ch;
 }
 
 .about-hero-lead {
   font-size: var(--text-lead);
-  line-height: 1.7;
-  max-width: 58ch;
+  line-height: var(--leading-lead);
+  max-width: var(--measure-lead);
   color: var(--text-secondary-accessible);
 }
 
@@ -90,7 +90,7 @@
 }
 
 .about-body-prose {
-  max-width: 64ch;
+  max-width: var(--measure-prose);
 }
 
 /* 03. Unified Technical Focus Block */

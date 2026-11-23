@@ -10,8 +10,15 @@ const NAV_ITEMS = [
   { id: 'about', label: 'About', path: 'about/', code: '01' },
   { id: 'work', label: 'Work', path: 'work/', code: '02' },
   { id: 'research', label: 'Research', path: 'research/', code: '03' },
-  { id: 'contact', label: 'Contact', path: 'contact/', code: '04' }
+  { id: 'cv', label: 'CV', path: 'cv/', code: '04' },
+  { id: 'contact', label: 'Contact', path: 'contact/', code: '05' }
 ];
+
+const PAGE_SECTION_MAP = {
+  agrishift: 'work',
+  'academic-performance-ml': 'work',
+  'esp32-iot': 'work'
+};
 
 const PROFILE_LINKS = {
   email: 'mailto:borannogolder@gmail.com',
@@ -144,15 +151,16 @@ function renderFooterMarkup(root, activePage) {
 
 export function initShell() {
   const root = document.documentElement.getAttribute('data-root') || './';
-  const activePage = document.documentElement.getAttribute('data-page') || 'home';
+  const rawPage = document.documentElement.getAttribute('data-page') || 'home';
+  const activePage = PAGE_SECTION_MAP[rawPage] || rawPage;
 
   const headerMount = document.querySelector('[data-site-header]');
-  if (headerMount) {
+  if (headerMount && !headerMount.querySelector('[data-header]')) {
     headerMount.innerHTML = renderHeaderMarkup(root, activePage);
   }
 
   const footerMount = document.querySelector('[data-site-footer]');
-  if (footerMount) {
+  if (footerMount && !footerMount.querySelector('.site-footer')) {
     footerMount.innerHTML = renderFooterMarkup(root, activePage);
   }
 }

@@ -6,10 +6,21 @@ import { initCopyEmail } from './modules/copy-email.js';
 
 document.documentElement.classList.add('js-ready');
 
-document.addEventListener('DOMContentLoaded', () => {
+let initialized = false;
+
+function boot() {
+  if (initialized) return;
+  initialized = true;
+
   initShell();
   initNavigation();
   initScrollReveal();
   initProjectFilter();
   initCopyEmail();
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', boot, { once: true });
+} else {
+  boot();
+}
