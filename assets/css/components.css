@@ -919,3 +919,339 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+/* ==========================================================================
+   REUSABLE MEDIA INFRASTRUCTURE & ACCESSIBLE LIGHTBOX (Phase H)
+   Shared across all portfolio pages for future real visual asset integration.
+   ========================================================================== */
+
+.media-figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+.media-frame {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-default);
+  background-color: var(--bg-subtle);
+}
+
+.band--dark .media-frame {
+  border-color: var(--dark-border);
+  background-color: var(--dark-bg-media);
+}
+
+.media-frame > img,
+.media-frame > picture > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* A. Project Hero Media (16:9 Cover) */
+.media-hero {
+  width: 100%;
+}
+
+.media-frame--hero {
+  aspect-ratio: 16 / 9;
+}
+
+.media-frame--hero > img,
+.media-frame--hero > picture > img {
+  object-fit: cover;
+}
+
+/* B. Screenshot Gallery & Proportions */
+.media-gallery {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-5);
+}
+
+.media-frame--screen {
+  aspect-ratio: 16 / 10;
+}
+
+.media-frame--screen > img,
+.media-frame--screen > picture > img {
+  object-fit: cover;
+}
+
+.media-frame--square {
+  aspect-ratio: 1 / 1;
+}
+
+.media-frame--square > img,
+.media-frame--square > picture > img {
+  object-fit: cover;
+}
+
+.media-frame--portrait {
+  aspect-ratio: 4 / 5;
+}
+
+.media-frame--portrait > img,
+.media-frame--portrait > picture > img {
+  object-fit: cover;
+}
+
+/* C. Technical Diagram Container (Contain — never crop diagrams) */
+.media-frame--diagram {
+  aspect-ratio: 16 / 10;
+  padding: var(--space-4);
+  background-color: var(--bg-surface);
+}
+
+.band--dark .media-frame--diagram {
+  background-color: var(--dark-bg-surface);
+}
+
+.media-frame--diagram > img,
+.media-frame--diagram > picture > img {
+  object-fit: contain;
+}
+
+/* D. Research Visualization Container (Contain — preserve chart labels) */
+.media-frame--viz {
+  aspect-ratio: 16 / 10;
+  padding: var(--space-4);
+  background-color: var(--bg-surface);
+}
+
+.band--dark .media-frame--viz {
+  background-color: var(--dark-bg-surface);
+}
+
+.media-frame--viz > img,
+.media-frame--viz > picture > img {
+  object-fit: contain;
+}
+
+/* E. Hardware Photography Gallery & Schematics */
+.media-hardware-gallery {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-5);
+}
+
+.media-frame--hardware {
+  aspect-ratio: 4 / 3;
+}
+
+.media-frame--hardware > img,
+.media-frame--hardware > picture > img {
+  object-fit: cover;
+}
+
+.media-frame--schematic {
+  aspect-ratio: 16 / 10;
+  padding: var(--space-4);
+  background-color: var(--bg-surface);
+}
+
+.band--dark .media-frame--schematic {
+  background-color: var(--dark-bg-surface);
+}
+
+.media-frame--schematic > img,
+.media-frame--schematic > picture > img {
+  object-fit: contain;
+}
+
+/* Unified Media Caption */
+.media-caption {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-2) var(--space-4);
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--border-default);
+}
+
+.band--dark .media-caption {
+  border-top-color: var(--dark-border);
+}
+
+/* Intentional Editorial Placeholder State */
+.media-placeholder {
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-4);
+  background-image:
+    linear-gradient(to right, rgba(23, 25, 30, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(23, 25, 30, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.band--dark .media-placeholder {
+  background-image:
+    linear-gradient(to right, rgba(247, 247, 244, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(247, 247, 244, 0.04) 1px, transparent 1px);
+}
+
+.media-placeholder-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.media-placeholder-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  max-width: 48ch;
+}
+
+.media-placeholder-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-mono-meta);
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.band--dark .media-placeholder-label {
+  color: var(--dark-text-primary);
+}
+
+.media-placeholder-note {
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--text-secondary-accessible);
+}
+
+.band--dark .media-placeholder-note {
+  color: var(--dark-text-secondary);
+}
+
+/* Lightbox Trigger Affordance */
+.is-lightbox-trigger {
+  cursor: zoom-in;
+  transition: border-color var(--duration-fast) ease;
+}
+
+.is-lightbox-trigger:hover {
+  border-color: var(--accent);
+}
+
+.band--dark .is-lightbox-trigger:hover {
+  border-color: var(--dark-accent);
+}
+
+/* Accessible Lightbox Overlay */
+html.lightbox-open {
+  overflow: hidden;
+}
+
+.media-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-5);
+}
+
+.media-lightbox[hidden] {
+  display: none;
+}
+
+.media-lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(15, 17, 21, 0.88);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.media-lightbox-dialog {
+  position: relative;
+  z-index: 1;
+  width: min(1120px, 100%);
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.media-lightbox-close {
+  align-self: flex-end;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--dark-border-strong);
+  background-color: var(--dark-bg-surface);
+  color: var(--dark-text-primary);
+  cursor: pointer;
+  transition: background-color var(--duration-fast) ease, border-color var(--duration-fast) ease;
+}
+
+.media-lightbox-close:hover {
+  background-color: var(--dark-bg-elevated);
+  border-color: var(--dark-accent);
+}
+
+.media-lightbox-figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  align-items: center;
+}
+
+.media-lightbox-img {
+  max-width: 100%;
+  max-height: 76vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--dark-border);
+  background-color: var(--dark-bg-media);
+}
+
+.media-lightbox-caption {
+  font-family: var(--font-mono);
+  font-size: var(--text-mono-meta);
+  color: var(--dark-text-secondary);
+  text-align: center;
+  max-width: 68ch;
+}
+
+@media (min-width: 768px) {
+  .media-gallery,
+  .media-hardware-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .media-gallery--3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .is-lightbox-trigger,
+  .media-lightbox-close {
+    transition: none;
+  }
+}

@@ -3,6 +3,7 @@ import { initNavigation } from './modules/nav.js';
 import { initScrollReveal } from './modules/reveal.js';
 import { initProjectFilter } from './modules/project-filter.js';
 import { initCopyEmail } from './modules/copy-email.js';
+import { initLightbox } from './modules/lightbox.js';
 
 document.documentElement.classList.add('js-ready');
 
@@ -17,6 +18,7 @@ function boot() {
   initScrollReveal();
   initProjectFilter();
   initCopyEmail();
+  initLightbox();
 }
 
 if (document.readyState === 'loading') {
